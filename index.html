@@ -6,6 +6,7 @@
     <title>fullerfieldsfarms</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" type="image/png" href="./images/logo_figma_v1.png">
     <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Aboreto&family=Cinzel+Decorative:wght@400;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -43,7 +44,7 @@
                 <section class="hero-content" aria-labelledby="hero-title">
                     <p class="eyebrow">Welcome to</p>
                     <h1 id="hero-title">Fuller Fields Farms</h1>
-                    <p class="hero-copy">Your trusted farm for quality crops and livestock based in Imo.</p>
+                    <p class="hero-copy">Your trusted farm for quality crops and livestock based in Imo State, Nigeria.</p>
                 </section>
             </section>
 
@@ -74,9 +75,124 @@
                     </div>
                 </div>
             </section>
+
+            <section class="products-section scroll-reveal" id="products" aria-labelledby="products-title">
+                <h2 id="products-title" class="products-title">Our Products</h2>
+                <p class="products-subtitle">Select from a wide range of products from our farm.</p>
+
+                <div class="products-toolbar">
+                    <span class="search-label">Find products</span>
+
+                    <div class="products-controls">
+                        <input
+                            id="productSearchInput"
+                            type="search"
+                            placeholder="Search by name or type..."
+                            autocomplete="on"
+                        >
+
+                        <select id="productTypeSelect" aria-label="Filter products by type"></select>
+                    </div>
+                </div>
+
+                <div id="productGrid"></div>
+            </section>
+
+            <section class="gallery-section scroll-reveal" id="gallery" aria-labelledby="gallery-title">
+                <h2 id="gallery-title" class="gallery-title">Gallery</h2>
+                <p class="gallery-subtitle">Take a look at what our farm and produce look like through the seasons.</p>
+
+                <div class="gallery-grid" aria-label="Farm gallery images">
+                    <img src="images/stock/lilla79-cows-7880154_1920.jpg" alt="Cows resting on green pasture">
+                    <img src="images/stock/tomatoes-7433786_1920.jpg" alt="Fresh tomatoes harvest">
+                    <img src="images/stock/oranges-407429_1920.jpg" alt="Crates of oranges">
+                    <img src="images/stock/apples-7458975_1920.jpg" alt="Basket of red apples">
+                    <img src="images/stock/banana-5734_1920.jpg" alt="Ripe bananas on display">
+                    <img src="images/stock/artursfoto-modified-1744952_1920.jpg" alt="Farm produce closeup">
+                </div>
+            </section>
+
+            <section class="blog-section scroll-reveal" id="blog" aria-labelledby="blog-title">
+                <h2 id="blog-title" class="blog-title">Blog</h2>
+
+                <article class="blog-feature">
+                    <div class="blog-copy">
+                        <h3>Our thoughts on GMO (genetically modified foods) in Nigeria</h3>
+                        <p>
+                            Food containing GMOs has been available in Nigeria since 2019, yet the debate over
+                            the controversial agricultural technology reignited online after media influencer
+                            Chinoso Egemba posted a video boosting the benefits of GMOs.
+                        </p>
+                        <p>
+                            The clip, which has garnered millions of views, sparked public debate after photos
+                            reemerged of Egemba's 2023 meeting with U.S billionaire Bill Gates.
+                        </p>
+                        <p class="blog-source">Excerpt from africanews.com.</p>
+                    </div>
+
+                    <div class="blog-image-wrap">
+                        <img src="images/stock/artursfoto-modified-1744952_1920.jpg" alt="Tomato produce image for blog highlight">
+                    </div>
+                </article>
+            </section>
+
+            <section class="contact-section scroll-reveal" id="contact" aria-labelledby="contact-title">
+                <h2 id="contact-title" class="contact-title">Contact Us</h2>
+
+                <div class="contact-card">
+                    <label for="contactMessage" class="sr-only">Type a message</label>
+                    <textarea id="contactMessage" placeholder="Type a message...."></textarea>
+
+                    <div class="contact-actions">
+                        <button
+                            id="whatsappSendBtn"
+                            type="button"
+                            data-whatsapp-number="+12508800572"
+                        >
+                            Send on WhatsApp
+                        </button>
+                    </div>
+                </div>
+            </section>
         </main>
+
+        <footer class="site-footer" id="footer">
+            <div class="footer-columns">
+                <section class="footer-col" aria-labelledby="footer-about-title">
+                    <h3 id="footer-about-title">About Our Market</h3>
+                    <p>
+                        Browse produce, set your quantities, and send your order in one step.
+                        When you submit, your message goes directly to the farmer for quick confirmation.
+                    </p>
+                </section>
+
+                <section class="footer-col" aria-labelledby="footer-location-title">
+                    <h3 id="footer-location-title">Location &amp; Hours</h3>
+                    <p>Farm-gate pickup and Delivery, Imo State, Nigeria.</p>
+                    <p>Saturday: 8:00 AM - 2:00 PM</p>
+                    <p>Sunday: 9:00 AM - 12:00 PM</p>
+                </section>
+
+                <nav class="footer-col footer-links" aria-label="Footer navigation">
+                    <h3>Explore</h3>
+                    <a href="#home">Home</a>
+                    <a href="#about">About Us</a>
+                    <a href="#products">Our Products</a>
+                    <a href="#gallery">Gallery</a>
+                    <a href="#blog">Blog</a>
+                    <a href="#contact">Contact</a>
+                </nav>
+            </div>
+
+            <div class="footer-bottom">
+                <p>c 2026 Fuller Fields Farms</p>
+                <a href="https://davidteddy.space"
+                target="_blank"
+                rel="noopener noreferrer">Proudly developed by <b>Teddy</b></a>
+            </div>
+        </footer>
     </div>
 
-    <script src="script.js"></script>
+    <script type="module" src="app.js"></script>
 </body>
 </html>
