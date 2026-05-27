@@ -1,4 +1,5 @@
 import { PRODUCTS } from "./products.js";
+import { sanitizeInput, sendWhatsAppMessage } from "./script.js";
 
 const navToggle = document.querySelector(".nav-toggle");
 const siteNav = document.querySelector(".site-nav");
@@ -128,16 +129,17 @@ if (productGrid) {
 if (whatsappSendBtn && contactMessageInput) {
 	whatsappSendBtn.addEventListener("click", () => {
 		const rawNumber = whatsappSendBtn.dataset.whatsappNumber || "";
-		const cleanNumber = rawNumber.replace(/\D/g, "");
-		const message = contactMessageInput.value.trim() || "Hello Fuller Fields Farms, I would like to place an order.";
+		const payload = sanitizeInput(contactMessageInput.value).trim();
 
-		if (!cleanNumber) {
-			window.alert("Please set a valid WhatsApp number in data-whatsapp-number.");
+		if (!payload) {
+			window.alert("Please type a message before sending.");
 			return;
 		}
 
-		const whatsappUrl = `https://wa.me/${cleanNumber}?text=${encodeURIComponent(message)}`;
-		window.open(whatsappUrl, "_blank", "noopener,noreferrer");
+		sendWhatsAppMessage({
+			phoneNumber: rawNumber,
+			message: payload
+		});
 	});
 }
 

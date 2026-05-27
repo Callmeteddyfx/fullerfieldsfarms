@@ -1,3 +1,38 @@
+export function sanitizeInput(str) {
+	const tempNode = document.createElement("div");
+	tempNode.textContent = String(str ?? "");
+	return tempNode.textContent || "";
+}
+
+export function parsePositiveInteger(value) {
+	const parsedValue = Number.parseInt(String(value ?? ""), 10);
+
+	if (Number.isNaN(parsedValue) || parsedValue < 0) {
+		return 0;
+	}
+
+	return parsedValue;
+}
+
+export function sendWhatsAppMessage({ phoneNumber, message, fallbackMessage = "Hello Fuller Fields Farms, I would like to place an order." }) {
+	const cleanNumber = String(phoneNumber ?? "").replace(/\D/g, "");
+	const safeMessage = sanitizeInput(message || fallbackMessage).trim();
+
+	if (!safeMessage) {
+		window.alert("Please type a message before sending.");
+		return false;
+	}
+
+	const finalPayload = encodeURIComponent(safeMessage);
+
+	if (!cleanNumber) {
+		window.alert("Please set a valid phone number.");
+		return false;
+	}
+
+	window.location.href = `sms:${cleanNumber}?body=${finalPayload}`;
+	return true;
+}
 const navToggle = document.querySelector('.nav-toggle');
 const siteNav = document.querySelector('.site-nav');
 
