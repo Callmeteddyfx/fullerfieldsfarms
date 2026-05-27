@@ -30,7 +30,7 @@ export function sendWhatsAppMessage({ phoneNumber, message, fallbackMessage = "H
 		return false;
 	}
 
-	window.location.href = `sms:${cleanNumber}?body=${finalPayload}`;
+	window.location.href = `https://wa.me/${cleanNumber}?text=${finalPayload}`;
 	return true;
 }
 const navToggle = document.querySelector('.nav-toggle');
