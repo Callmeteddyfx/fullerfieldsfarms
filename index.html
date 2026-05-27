@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fullerfieldsfarms</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Aboreto&family=Cinzel+Decorative:wght@400;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="page-shell">
+        <header class="site-header">
+            <a class="brand" href="#home" aria-label="Fuller Fields Farms home">
+                <img src="images/logo_figma_v1.png" alt="Fuller Fields Farms logo" class="brand-logo">
+            </a>
+
+            <div class="nav-shell">
+                <button class="nav-toggle" type="button" aria-controls="primary-navigation" aria-expanded="false" aria-label="Open navigation menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <nav class="site-nav" id="primary-navigation" aria-label="Primary navigation">
+                    <a href="#home">Home</a>
+                    <a href="#about">About Us</a>
+                    <a href="#products">Our Products</a>
+                    <a href="#gallery">Gallery</a>
+                    <a href="#blog">Blog</a>
+                    <a href="#contact">Contact</a>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <section class="hero scroll-reveal" id="home">
+                <div class="hero-media" aria-label="Farm landscape">
+                    <img src="images/stock/lilla79-cows-7880154_1920.jpg" alt="Cows resting in a green farm pasture">
+                </div>
+
+                <section class="hero-content" aria-labelledby="hero-title">
+                    <p class="eyebrow">Welcome to</p>
+                    <h1 id="hero-title">Fuller Fields Farms</h1>
+                    <p class="hero-copy">Your trusted farm for quality crops and livestock based in Imo.</p>
+                </section>
+            </section>
+
+            <section class="about-section scroll-reveal" id="about" aria-labelledby="about-title">
+                <div class="section-label">About Us</div>
+
+                <div class="about-grid">
+                    <div class="about-copy">
+                        <p class="section-kicker">Rooted in the land</p>
+                        <h2 id="about-title">A family farm built on quality, care, and consistency.</h2>
+                        <p>We grow seasonal crops and raise livestock with a focus on freshness, dependable supply, and straightforward service for local customers and businesses.</p>
+                        <p>Every order is handled with the same attention we give the farm itself, from planting to harvest and from pasture to delivery.</p>
+                    </div>
+
+                    <div class="about-card-row">
+                        <article class="about-card">
+                            <span>Fresh Harvest</span>
+                            <strong>Seasonal crops picked at the right time.</strong>
+                        </article>
+                        <article class="about-card">
+                            <span>Healthy Livestock</span>
+                            <strong>Responsible animal care with daily attention.</strong>
+                        </article>
+                        <article class="about-card">
+                            <span>Local Service</span>
+                            <strong>Simple ordering built for quick handoff and pickup.</strong>
+                        </article>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
